@@ -1,0 +1,15 @@
+.app-contant {
+  display: flex;
+}
+
+.app-contant .middle {
+  flex: 7;
+}
+
+.app-contant .left {
+  flex: 2;
+}
+
+.app-contant .right {
+  flex: 2;
+}
