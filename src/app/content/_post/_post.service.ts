@@ -13,7 +13,6 @@ export class PostService {
   constructor(private http: Http) { }
 
   getPost(id): Promise<PostModel> {
-    console.log(id);
     return this.http.get(this.postUrl + id)
       .toPromise()
       .then(response => response.json().data as PostModel)

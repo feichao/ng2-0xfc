@@ -11,7 +11,8 @@ import { ArtModel } from './art.interface';
 
 @Injectable()
 export class AppContentArt implements OnInit {
-  private category: ArtModel[];
+  public category: ArtModel[];
+  
   constructor(private artService: ArtService) {}
 
   ngOnInit(): void {

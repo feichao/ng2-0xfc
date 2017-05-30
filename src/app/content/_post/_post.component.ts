@@ -15,7 +15,7 @@ import { PostModel } from './_post.interface';
 
 @Injectable()
 export class Post implements OnInit {
-  private post: PostModel;
+  public post: PostModel;
   constructor(
     private route: ActivatedRoute, 
     private router: Router,
@@ -26,5 +26,4 @@ export class Post implements OnInit {
       .switchMap((params: Params) => this.postService.getPost(params['id']))
       .subscribe((post: PostModel) => this.post = post);
   }
-
 }

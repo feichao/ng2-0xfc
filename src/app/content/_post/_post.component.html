@@ -1,4 +1,6 @@
-<h1>{{ post.title }}</h1>
-<h1>{{ post.author }}</h1>
-<h1>{{ post.update }}</h1>
-<div>{{ post.body }}</div>
+<div *ngIf="post">
+  <h1>{{ post.title }}</h1>
+  <h1>{{ post.author }}</h1>
+  <h1>{{ post.update }}</h1>
+  <div>{{ post.body }}</div>
+</div>
