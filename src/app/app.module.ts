@@ -14,6 +14,7 @@ import { AppContentComponent } from './content/content.component';
 import { AppContentArt } from './content/art/art.component';
 import { AppContentStory } from './content/story/story.component';
 import { AppContentHole } from './content/hole/hole.component';
+import { Post } from './content/_post/_post.component';
 import { AppFooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { AppFooterComponent } from './footer/footer.component';
     AppContentArt,
     AppContentStory,
     AppContentHole,
+    Post,
     AppFooterComponent
   ],
   imports: [

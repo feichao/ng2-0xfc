@@ -6,6 +6,6 @@ export interface ArtModel {
   year: number,
   category: number,
   summary: string,
-  tags: string,
+  tags: string[],
   href: string
 };
