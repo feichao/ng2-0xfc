@@ -13,3 +13,5 @@ body, ul {
 ul, ol {
   list-style: none;
 }
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';

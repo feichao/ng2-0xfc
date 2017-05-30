@@ -1,11 +1,7 @@
-.nav-list {
+.top-bar {
   display: flex;
 }
 
-.nav-list li {
-  flex: 1;
-  font-size: 1.5rem;
-  line-height: 30px;  
-  padding: 15px;
-  text-align: center;
+.top-bar > div {
+  display: flex;
 }
