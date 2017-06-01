@@ -1,4 +1,5 @@
-const baseUrl = 'http://localhost:3003/'
+// const baseUrl = 'http://localhost:3003/';
+const baseUrl = '/';
 
 const Constant = {
   URL: {
