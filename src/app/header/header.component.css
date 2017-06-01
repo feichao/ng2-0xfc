@@ -1,7 +1,16 @@
 .top-bar {
-  display: flex;
+  background: lightseagreen;
+  color: white;
 }
 
-.top-bar > div {
-  display: flex;
+.top-bar .logo {
+  width: 40px;
+}
+
+.top-bar .mat-button {
+  font-size: 18px;
+  line-height: 40px;
+  margin: 0 8px;
+  padding: 0 16px;
+  width: 100px;
 }

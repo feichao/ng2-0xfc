@@ -1,8 +1,8 @@
-<md-list class="side-nav">
+<md-list>
   <h3 md-subheader>Folders</h3>
   <md-list-item *ngFor="let cate of category">
     <h4 md-line>{{cate.title}}<a routerLink="{{cate.id}}">goto</a></h4>
     <p md-line>{{cate.summary}}</p>
-    <p md-line>{{cate.date | date}}</p>
+    <p md-line>{{cate.date}}</p>
   </md-list-item>
 </md-list>

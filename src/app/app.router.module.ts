@@ -5,6 +5,7 @@ import { AppContentArt } from './content/art/art.component';
 import { AppContentStory } from './content/story/story.component';
 import { AppContentHole } from './content/hole/hole.component';
 import { Post } from './content/_post/_post.component';
+import { AppAboutComponent } from './about/about.component';
 
 const routes: Routes = [{ 
     path: '', 
@@ -27,6 +28,9 @@ const routes: Routes = [{
   }, { 
     path: 'hole', 
     component: AppContentHole 
+  }, { 
+    path: 'about', 
+    component: AppAboutComponent 
   }
 ];
 
