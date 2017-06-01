@@ -1,22 +1,13 @@
-import { Component, Injectable, OnInit } from '@angular/core';
-import { ArtService } from './art.service';
-import { ArtModel } from './art.interface';
+import { Component, Injectable } from '@angular/core';
+import Constant from '../../app.constant';
 
 @Component({
   selector: 'content-art',
   templateUrl: './art.component.html',
-  styleUrls: ['./art.component.css'],
-  providers: [ArtService]
+  styleUrls: ['./art.component.css']
 })
 
 @Injectable()
-export class AppContentArt implements OnInit {
-  public category: ArtModel[];
-  
-  constructor(private artService: ArtService) {}
-
-  ngOnInit(): void {
-    this.artService.getArtCategory().then(category => this.category = category);
-  }
-
+export class AppContentArt {
+  public categoryUrl: string = Constant.URL.art;
 }

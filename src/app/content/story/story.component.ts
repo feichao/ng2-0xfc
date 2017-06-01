@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Constant from '../../app.constant';
 
 @Component({
   selector: 'content-story',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppContentStory {
-
+  public storyUrl: string = Constant.URL.story;
 }

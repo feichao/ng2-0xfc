@@ -2,20 +2,17 @@ import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
-import Constant from '../../app.constant';
 
-import { ArtModel } from './art.interface';
+import { CategoryModel } from './_category.interface';
 
 @Injectable()
-export class ArtService {
-  private artCategoryurl: string = Constant.URL.art;
-
+export class CategoryService {
   constructor(private http: Http) { }
 
-  getArtCategory(): Promise<ArtModel[]> {
-    return this.http.get(this.artCategoryurl)
+  getCategory(url: string): Promise<CategoryModel[]> {
+    return this.http.get(url)
       .toPromise()
-      .then(response => response.json().data.reduce((pre, now) => pre.concat(now), []) as ArtModel[])
+      .then(response => response.json().data.reduce((pre, now) => pre.concat(now), []) as CategoryModel[])
       .catch(this.handleError);
   }
 

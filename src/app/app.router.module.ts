@@ -19,7 +19,11 @@ const routes: Routes = [{
     }]
   }, {
     path: 'story', 
-    component: AppContentStory 
+    component: AppContentStory,
+    children: [{
+      path: ':id',
+      component: Post,
+    }]
   }, { 
     path: 'hole', 
     component: AppContentHole 

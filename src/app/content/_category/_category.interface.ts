@@ -1,4 +1,4 @@
-export interface ArtModel {
+export interface CategoryModel {
   id: string,
   title: string,
   author: string,

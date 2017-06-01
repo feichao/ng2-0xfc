@@ -1,9 +1,9 @@
-const baseUrl = '/'
+const baseUrl = 'http://localhost:3003/'
 
 const Constant = {
   URL: {
     art: baseUrl + 'json/articles/category',
-    story: baseUrl + 'json/stories/category',
+    story: baseUrl + 'json/storys/category',
     hole: baseUrl + 'json/hole',
     post: baseUrl + 'json/article/',
     about: baseUrl + 'json/about'
