@@ -19,6 +19,8 @@ import { Category } from './content/_category/_category.component';
 import { AppAboutComponent } from './about/about.component';
 import { AppFooterComponent } from './footer/footer.component';
 
+import { LoadingComponent } from './components/loading/loading.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { AppFooterComponent } from './footer/footer.component';
     Post,
     Category,
     AppAboutComponent,
-    AppFooterComponent
+    AppFooterComponent,
+
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

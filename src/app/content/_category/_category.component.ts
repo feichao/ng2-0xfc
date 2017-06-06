@@ -14,7 +14,14 @@ export class Category implements OnInit {
   @Input()
   public url: string;
 
+  @Input()
+  public cTitle: string;
+
   public category: CategoryModel[];
+
+  public trim(str: string): string {
+    return str.replace(/\s/g, '');
+  }
   
   constructor(private categoryService: CategoryService) {}
 

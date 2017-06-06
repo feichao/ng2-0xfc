@@ -2,5 +2,5 @@
   <h1>{{ post.title }}</h1>
   <h1>{{ post.author }}</h1>
   <h1>{{ post.update }}</h1>
-  <div>{{ post.body }}</div>
+  <div [innerHTML]="post.body" class="body"></div>
 </div>

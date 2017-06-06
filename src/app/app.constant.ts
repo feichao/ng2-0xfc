@@ -1,5 +1,6 @@
-// const baseUrl = 'http://localhost:3003/';
-const baseUrl = '/';
+import { environment } from '../environments/environment';
+
+const baseUrl = environment.server;
 
 const Constant = {
   URL: {
