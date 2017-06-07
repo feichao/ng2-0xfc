@@ -1,19 +1,26 @@
 .list-item {
+  border-right: 5px solid transparent;
   cursor: pointer;
   display: block;
   outline: none;
-  padding: 6px;
+  padding: 6px 1px 6px 6px;
   transition: all .35s;
 }
 
 .list-item.active {
-  box-shadow: 0 0 16px 8px #ccc;
+  border-right: 5px solid #20b2aa;
+  box-shadow: 0 0 16px 0 #cfcfcf;
   position: relative;
   z-index: 99;
 }
 
 .list-item:nth-child(EVEN) {
-  background: #f0f0f0;
+  background: #f7f7f7;
+}
+
+.list-item:nth-child(EVEN).active {
+  border-right: 5px solid #20b2aa;
+  box-shadow: 0 0 16px 0 #c0c0c0;
 }
 
 .list-item .section {

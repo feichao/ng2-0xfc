@@ -1,4 +1,5 @@
 import { Component, Injectable, OnInit, Input } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { CategoryService } from './_category.service';
 import { CategoryModel } from './_category.interface';
 
@@ -19,11 +20,11 @@ export class Category implements OnInit {
 
   public category: CategoryModel[];
 
-  public trim(str: string): string {
-    return str.replace(/\s/g, '');
+  public trim(str: string): SafeHtml {
+    return this.sanitized.bypassSecurityTrustHtml(str.replace(/\s/g, ''));
   }
   
-  constructor(private categoryService: CategoryService) {}
+  constructor(private categoryService: CategoryService, private sanitized: DomSanitizer,) {}
 
   ngOnInit(): void {
     this.categoryService.getCategory(this.url).then(category => this.category = category);

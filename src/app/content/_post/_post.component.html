@@ -1,6 +1,7 @@
 <div *ngIf="post">
+  <link [href]="css" *ngFor="let css of saftyCssLink" rel="stylesheet"/>
   <h1>{{ post.title }}</h1>
   <h1>{{ post.author }}</h1>
   <h1>{{ post.update }}</h1>
-  <div [innerHTML]="post.body" class="body"></div>
+  <div [innerHTML]="this.saftyBody" class="body"></div>
 </div>
