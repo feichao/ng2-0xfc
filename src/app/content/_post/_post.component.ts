@@ -7,6 +7,11 @@ import 'rxjs/add/operator/switchMap';
 import { PostService } from './_post.service';
 import { PostModel } from './_post.interface';
 
+function getWindow() : any {
+   // return the global native browser window object
+   return window;
+}
+
 @Component({
   selector: 'a-post',
   templateUrl: './_post.component.html',
@@ -19,6 +24,7 @@ export class Post implements OnInit {
   public post: PostModel;
   public saftyBody: SafeHtml;
   public saftyCssLink: SafeResourceUrl[];
+  public _window: any = getWindow();
 
   constructor(
     private route: ActivatedRoute, 
@@ -35,7 +41,19 @@ export class Post implements OnInit {
         this.saftyBody = this.sanitized.bypassSecurityTrustHtml(this.post.body);
 
         this.saftyCssLink = [];
+        
         // 强制加载网易云跟帖插件
+        let tie = document.getElementById('cloud-tie-wrapper');
+        if(tie) {
+          tie.innerHTML = '';
+        }
+        this._window.cloudTieConfig = {
+          url: document.location.href,
+          sourceId: '',
+          productKey: 'b6fef8a47c1445d8acfddbd8dc465ff3',
+          target: 'cloud-tie-wrapper'
+        };
+
         this.post.js.push('https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js');
         for(let jsLink of this.post.js) {
           var s = document.createElement('script');
