@@ -38,3 +38,7 @@ ul, ol {
   overflow-y: auto;
   padding: 0 10px 10px;
 }
+
+#yun-tie-sdk-wrap {
+  padding: 0 !important;
+}

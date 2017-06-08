@@ -35,6 +35,8 @@ export class Post implements OnInit {
         this.saftyBody = this.sanitized.bypassSecurityTrustHtml(this.post.body);
 
         this.saftyCssLink = [];
+        // 强制加载网易云跟帖插件
+        this.post.js.push('https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js');
         for(let jsLink of this.post.js) {
           var s = document.createElement('script');
           s.type = 'text/javascript';
