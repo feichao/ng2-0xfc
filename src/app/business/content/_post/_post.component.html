@@ -1,0 +1,8 @@
+<div *ngIf="post">
+  <link [href]="css" *ngFor="let css of saftyCssLink" rel="stylesheet"/>
+  <h1>{{ post.title }}</h1>
+  <h1>{{ post.author }}</h1>
+  <h1>{{ post.update }}</h1>
+  <div [innerHTML]="saftyBody" class="body"></div>
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+</div>

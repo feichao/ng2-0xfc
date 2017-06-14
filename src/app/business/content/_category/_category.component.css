@@ -1,0 +1,58 @@
+.content-list {
+  display: block;
+}
+
+.list-item {
+  border-left: 4px solid #ddd;
+  cursor: pointer;
+  display: block;
+  margin-left: 18px;
+  outline: none;
+  padding: 6px 1px 6px 180px;
+  position: relative;
+  transition: all .35s;
+}
+
+.list-item::before {
+  content: attr(dataDate);
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.list-item::after {
+  background: #ccc;
+  border-radius: 50%;
+  content: '';
+  height: 12px;
+  left: -8px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+}
+
+.list-item.active {
+  border-right: 5px solid #20b2aa;
+  box-shadow: 0 0 16px 0 #cfcfcf;
+  position: relative;
+  z-index: 99;
+}
+
+.list-item:nth-child(EVEN) {
+  background: #f7f7f7;
+}
+
+.list-item:nth-child(EVEN).active {
+  border-right: 5px solid #20b2aa;
+  box-shadow: 0 0 16px 0 #c0c0c0;
+}
+
+.title {
+  margin: 0;
+}
+
+:host /deep/ .summary p {
+  margin: 6px 0;
+}

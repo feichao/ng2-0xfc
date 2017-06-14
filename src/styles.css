@@ -17,19 +17,19 @@ ul, ol {
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 .content-container {
-  bottom: 0;
+  /*bottom: 0;
   display: flex;
   left: 0;
   position: fixed;
   right: 0;
-  top: 64px;
+  top: 64px;*/
 }
 
 .content-container content-category {
-  box-shadow: 2px 0 10px 0 #ccc;
+  /*box-shadow: 2px 0 10px 0 #ccc;
   overflow-y: auto;
   padding: 10px;
-  width: 22.22%;
+  width: 22.22%;*/
 }
 
 .content-container a-post {
