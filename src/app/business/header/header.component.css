@@ -1,7 +1,9 @@
 .header-container {
+  align-items: center;
   background: #00bcd4;
   color: white;
-  padding: 16px;
+  height: 60px;
+  padding: 0 16px;
 }
 
 .header-container .mat-button {

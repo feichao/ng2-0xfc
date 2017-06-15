@@ -1,0 +1,29 @@
+.index-container {
+  background: url(/assets/images/index.svg) repeat 30%, #00bcd4;
+  height: calc(100vh - 60px);
+  text-align: center;
+}
+
+.index-container > div {
+  position: relative;
+  top: 32%;
+}
+
+.index-container h2 {
+  color: white;
+  font-size: 36px;
+  margin: 0; 
+}
+
+.index-container h3 {
+  color: white;
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+.index-container .mat-raised-button {
+  color: #00bcd4;
+  font-size: 16px;
+  margin-top: 32px;
+  width: 120px;
+}
