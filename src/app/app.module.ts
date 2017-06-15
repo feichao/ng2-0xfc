@@ -8,9 +8,11 @@ import { MdToolbarModule, MdButtonModule, MdListModule } from '@angular/material
 
 import { AppRouterModule } from './app.router.module';
 
-import { AppComponent } from './app.component';
+import AppComponent from './app.component';
 
+import HeaderComponent from './business/header/header.component'; 
 import ContentComponent from './business/content/content.component';
+import ContentIndex from './business/content/index/index.component';
 import ContentArt from './business/content/art/art.component';
 
 import { Category } from './business/content/_category/_category.component';
@@ -19,7 +21,9 @@ import { Category } from './business/content/_category/_category.component';
   declarations: [
     AppComponent,
 
+    HeaderComponent,
     ContentComponent,
+    ContentIndex,
     ContentArt,
     Category
   ],

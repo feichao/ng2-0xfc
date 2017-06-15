@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 
-export class AppHeaderComponent {
+export default class HeaderComponent {
 
 }

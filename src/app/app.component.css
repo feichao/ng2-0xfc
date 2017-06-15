@@ -1,12 +1,4 @@
 .app-container {
-  display: block;
-  margin: auto;
-  max-width: 61.8%;
+  
 }
 
-@media(max-width: 960px) {
-  .app-container {
-    margin: auto 16px;
-    max-width: 100%;
-  }
-}

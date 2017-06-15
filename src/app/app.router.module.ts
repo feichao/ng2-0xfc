@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import ContentIndex from './business/content/index/index.component';
 import ContentArt from './business/content/art/art.component';
 
 const routes: Routes = [{ 
     path: '', 
-    redirectTo: '/art', 
-    pathMatch: 'full' 
+    component: ContentIndex
   }, { 
     path: 'art', 
     component: ContentArt, 

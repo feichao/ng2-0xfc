@@ -17,26 +17,25 @@ ul, ol {
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 .content-container {
-  /*bottom: 0;
+  display: block;
+  margin: auto;
+  max-width: 61.8%;
+}
+
+[layout='row'] {
   display: flex;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 64px;*/
 }
 
-.content-container content-category {
-  /*box-shadow: 2px 0 10px 0 #ccc;
-  overflow-y: auto;
-  padding: 10px;
-  width: 22.22%;*/
-}
-
-.content-container a-post {
+[layout='row'] > [flex] {
   flex: 1;
-  margin-left: 20px;
-  overflow-y: auto;
-  padding: 0 10px 10px;
+}
+
+
+@media(max-width: 960px) {
+  .content-container {
+    margin: auto 16px;
+    max-width: 100%;
+  }
 }
 
 #yun-tie-sdk-wrap {

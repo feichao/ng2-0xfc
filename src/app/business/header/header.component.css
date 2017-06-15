@@ -1,0 +1,9 @@
+.header-container {
+  background: #00bcd4;
+  color: white;
+  padding: 16px;
+}
+
+.header-container .mat-button {
+  font-size: 18px;
+}
