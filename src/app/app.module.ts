@@ -9,22 +9,30 @@ import { MdToolbarModule, MdButtonModule, MdListModule } from '@angular/material
 import { AppRouterModule } from './app.router.module';
 
 import AppComponent from './app.component';
+import AboutComponent from './business/about/about.component';
 
 import HeaderComponent from './business/header/header.component'; 
 import ContentComponent from './business/content/content.component';
+import ContentHeader from './business/content/_header/_header.component';
 import ContentIndex from './business/content/index/index.component';
 import ContentArt from './business/content/art/art.component';
+import ContentStory from './business/content/story/story.component';
+import ContentHole from './business/content/hole/hole.component';
 
 import { Category } from './business/content/_category/_category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
 
     HeaderComponent,
     ContentComponent,
+    ContentHeader,
     ContentIndex,
     ContentArt,
+    ContentStory,
+    ContentHole,
     Category
   ],
   imports: [

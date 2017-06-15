@@ -6,7 +6,6 @@ import Constant from '../../../app.constant';
   templateUrl: './story.component.html',
   styleUrls: ['./story.component.css']
 })
-
-export class ContentStory {
+export default class ContentStory {
   public storyUrl: string = Constant.URL.story;
 }

@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import ContentIndex from './business/content/index/index.component';
 import ContentArt from './business/content/art/art.component';
+import ContentStory from './business/content/story/story.component';
+import ContentHole from './business/content/hole/hole.component';
+
+import AboutComponent from './business/about/about.component';
 
 const routes: Routes = [{ 
     path: '', 
@@ -14,19 +18,19 @@ const routes: Routes = [{
     //   path: ':id',
     //   component: Post,
     // }]
-  // }, {
-  //   path: 'story', 
-  //   component: AppContentStory,
-  //   children: [{
-  //     path: ':id',
-  //     component: Post,
-  //   }]
-  // }, { 
-  //   path: 'hole', 
-  //   component: AppContentHole 
-  // }, { 
-  //   path: 'about', 
-  //   component: AppAboutComponent 
+  }, {
+    path: 'story', 
+    component: ContentStory,
+    // children: [{
+    //   path: ':id',
+    //   component: Post,
+    // }]
+  }, { 
+    path: 'hole', 
+    component: ContentHole 
+  }, { 
+    path: 'about', 
+    component: AboutComponent 
   }
 ];
 

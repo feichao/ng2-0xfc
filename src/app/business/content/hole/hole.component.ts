@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./hole.component.css']
 })
 
-export class AppContentHole {
+export default class ContentHole {
 
 }
