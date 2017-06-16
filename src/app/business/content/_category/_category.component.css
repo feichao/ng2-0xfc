@@ -53,6 +53,18 @@
   margin: 0;
 }
 
+.title,
 :host /deep/ .summary p {
+  display: block;
+  line-height: 1.4em;
   margin: 6px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media(max-width: 640px) {
+  .list-item {
+    padding-left: 120px;
+  }
 }

@@ -7,6 +7,7 @@ body {
 
 body, ul {
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
 }
 
@@ -14,7 +15,197 @@ ul, ol {
   list-style: none;
 }
 
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.no-margin {
+  margin: 0 !important;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.mgl0 {
+  margin-left: 0 !important;
+}
+
+.mgl1 {
+  margin-left: 8px !important;
+}
+
+.mgl2 {
+  margin-left: 16px !important;
+}
+
+.mgl3 {
+  margin-left: 24px !important;
+}
+
+.mgl4 {
+  margin-left: 32px !important;
+}
+
+.mgr0 {
+  margin-right: 0 !important;
+}
+
+.mgr1 {
+  margin-right: 8px !important;
+}
+
+.mgr2 {
+  margin-right: 16px !important;
+}
+
+.mgr3 {
+  margin-right: 24px !important;
+}
+
+.mgr4 {
+  margin-right: 32px !important;
+}
+
+.mgt0 {
+  margin-top: 0 !important;
+}
+
+.mgt1 {
+  margin-top: 8px !important;
+}
+
+.mgt2 {
+  margin-top: 16px !important;
+}
+
+.mgt3 {
+  margin-top: 24px !important;
+}
+
+.mgt4 {
+  margin-top: 32px !important;
+}
+
+.mgb0 {
+  margin-bottom: 0 !important;
+}
+
+.mgb1 {
+  margin-bottom: 8px !important;
+}
+
+.mgb2 {
+  margin-bottom: 16px !important;
+}
+
+.mgb3 {
+  margin-bottom: 24px !important;
+}
+
+.mgb4 {
+  margin-bottom: 32px !important;
+}
+
+.pdl0 {
+  padding-left: 0 !important;
+}
+
+.pdl1 {
+  padding-left: 8px !important;
+}
+
+.pdl2 {
+  padding-left: 16px !important;
+}
+
+.pdl3 {
+  padding-left: 24px !important;
+}
+
+.pdl4 {
+  padding-left: 32px !important;
+}
+
+.pdr0 {
+  padding-right: 0 !important;
+}
+
+.pdr1 {
+  padding-right: 8px !important;
+}
+
+.pdr2 {
+  padding-right: 16px !important;
+}
+
+.pdr3 {
+  padding-right: 24px !important;
+}
+
+.pdr4 {
+  padding-right: 32px !important;
+}
+
+.pdt0 {
+  padding-top: 0 !important;
+}
+
+.pdt1 {
+  padding-top: 8px !important;
+}
+
+.pdt2 {
+  padding-top: 16px !important;
+}
+
+.pdt3 {
+  padding-top: 24px !important;
+}
+
+.pdt4 {
+  padding-top: 32px !important;
+}
+
+.pdb0 {
+  padding-bottom: 0 !important;
+}
+
+.pdb1 {
+  padding-bottom: 8px !important;
+}
+
+.pdb2 {
+  padding-bottom: 16px !important;
+}
+
+.pdb3 {
+  padding-bottom: 24px !important;
+}
+
+.pdb4 {
+  padding-bottom: 32px !important;
+}
+
+.o-f-hidden {
+  overflow: hidden;
+}
+
+.c-point {
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
+.ellipsis {
+  display: block;
+  line-height: 1.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .content-container {
   display: block;
@@ -37,6 +228,8 @@ ul, ol {
     max-width: 100%;
   }
 }
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 #yun-tie-sdk-wrap {
   padding: 0 !important;

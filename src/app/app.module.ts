@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdToolbarModule, MdButtonModule, MdListModule } from '@angular/material';
+import { MdToolbarModule, MdButtonModule, MdListModule, MdSelectModule } from '@angular/material';
 
 import { AppRouterModule } from './app.router.module';
 
@@ -43,6 +43,7 @@ import { Category } from './business/content/_category/_category.component';
 
     MdToolbarModule,
     MdButtonModule,
+    MdSelectModule,
 
     AppRouterModule
   ],

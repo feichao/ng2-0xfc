@@ -1,11 +1,37 @@
 .header-container {
   align-items: center;
   background: #00bcd4;
-  color: white;
   height: 60px;
   padding: 0 16px;
 }
 
+.header-container .pc-style {
+  align-items: center;
+}
+
+.header-container .mobile-style {
+  display: none;
+}
+
+.header-container .link,
 .header-container .mat-button {
+  color: white;
   font-size: 18px;
+}
+
+.header-container .link {
+  outline: none;
+}
+
+.link img {
+  width: 32px;
+}
+
+@media(max-width: 540px) {
+  .header-container .pc-style {
+    display: none;
+  }
+  .header-container .mobile-style {
+    display: block;
+  }
 }

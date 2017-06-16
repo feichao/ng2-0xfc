@@ -1,9 +1,22 @@
 <div layout="row" class="header-container">
-  <a md-button routerLink="">0xfc</a>
-  <a md-button routerLink="art">猿文色</a>
-  <a md-button routerLink="story">故事旮</a>
-  <a md-button routerLink="hole">温柔乡</a>
-  <a md-button routerLink="about">关于の</a>
-  <span flex></span>
-  <a md-button href="https://github.com/feichao" target="_blank">GitHub</a>
+  <div layout="row" class="pc-style">
+    <a class="link" routerLink="">
+      <img src="/assets/images/logo.png" alt="logo"/>
+    </a>
+    <a md-button routerLink="art">猿文色</a>
+    <a md-button routerLink="story">故事旮</a>
+    <a md-button routerLink="hole">温柔乡</a>
+    <a md-button routerLink="about">关于の</a>
+    <span flex></span>
+    <a class="link" href="https://github.com/feichao" target="_blank">GitHub</a>
+  </div>
+  <div class="mobile-style">
+    <md-select>
+      <md-option routerLink="art">猿文色</md-option>
+      <md-option routerLink="story">故事旮</md-option>
+      <md-option routerLink="hole">温柔乡</md-option>
+      <md-option routerLink="about">关于の</md-option>
+      <md-option><a href="https://github.com/feichao" target="_blank">GitHub</a></md-option>
+    </md-select>
+  </div>
 </div>

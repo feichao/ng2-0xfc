@@ -11,7 +11,6 @@
 .header-container::before {
   background: #00bcd4;
   content: '';
-  display: block;
   height: 80px;
   left: -50%;
   position: absolute;
