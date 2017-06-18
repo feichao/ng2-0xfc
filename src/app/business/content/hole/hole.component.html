@@ -1,4 +1,35 @@
 <div class="content-container">
   <content-header cTitle="温柔乡"></content-header>
-  <router-outlet></router-outlet>
+  <div class="holes-container">
+    <div class="hole-container">
+      <div *ngFor="let hole of this.holes; let i = index;">
+        <div class="hole" *ngIf="i % 3 === 0">
+          <h2>
+            <img src="{{ hole.avatar }}" alt="avatar" /> {{ hole.name }}
+          </h2>
+          <p>{{ hole.content }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="middle hole-container">
+      <div *ngFor="let hole of this.holes; let i = index;">
+        <div class="hole" *ngIf="i % 3 === 1" >
+          <h2>
+            <img src="{{ hole.avatar }}" alt="avatar" /> {{ hole.name }}
+          </h2>
+          <p>{{ hole.content }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="hole-container">
+      <div *ngFor="let hole of this.holes; let i = index;">
+        <div class="hole" *ngIf="i % 3 === 2" >
+          <h2>
+            <img src="{{ hole.avatar }}" alt="avatar" /> {{ hole.name }}
+          </h2>
+          <p>{{ hole.content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

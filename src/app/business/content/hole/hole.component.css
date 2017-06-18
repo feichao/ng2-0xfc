@@ -1,0 +1,21 @@
+.holes-container {
+}
+
+.hole-container {
+  float: left;
+  width: 32%;
+}
+
+.middle {
+  margin: 0 2%;
+}
+
+.hole {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+  margin: 16px 0;
+  padding: 8px;
+}
+
+.hole img {
+  
+}
