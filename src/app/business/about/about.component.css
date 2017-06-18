@@ -1,0 +1,24 @@
+.about-container {
+  margin: auto;
+  max-width: 960px;
+  width: 61.8%;
+}
+
+.about-container p {
+  font-family: serif;
+  font-size: 18px;
+  line-height: 1.5em;
+  text-indent: 2em;
+}
+
+@media(max-width: 540px) {
+  .about-container {
+    width: 88%;
+  }
+}
+
+@media(max-width: 320px) {
+  .about-container {
+    margin: auto 16px;
+  }
+}

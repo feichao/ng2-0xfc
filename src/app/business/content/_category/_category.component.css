@@ -68,3 +68,14 @@
     padding-left: 120px;
   }
 }
+
+@media(max-width: 320px) {
+  .list-item {
+    padding-left: 60px;
+  }
+  .list-item::before {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 50px;
+  }
+}
