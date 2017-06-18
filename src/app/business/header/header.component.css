@@ -13,6 +13,19 @@
   display: none;
 }
 
+:host /deep/ .mobile-style .mat-select-value {
+  color: white;
+  font-size: 18px;
+}
+
+:host /deep/ .mobile-style .mat-select-arrow {
+  color: white;
+}
+
+:host /deep/ .mobile-style .mat-select-underline { 
+  background: white;
+}
+
 .header-container .link,
 .header-container .mat-button {
   color: white;
@@ -32,6 +45,6 @@
     display: none;
   }
   .header-container .mobile-style {
-    display: block;
+    display: flex;
   }
 }

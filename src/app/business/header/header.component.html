@@ -1,8 +1,8 @@
 <div layout="row" class="header-container">
-  <div layout="row" class="pc-style">
-    <a class="link" routerLink="">
-      <img src="/assets/images/logo.png" alt="logo"/>
-    </a>
+  <a class="link" routerLink="">
+    <img src="/assets/images/logo.png" alt="logo"/>
+  </a>
+  <div layout="row" class="pc-style" flex>
     <a md-button routerLink="art">猿文色</a>
     <a md-button routerLink="story">故事旮</a>
     <a md-button routerLink="hole">温柔乡</a>
@@ -10,13 +10,14 @@
     <span flex></span>
     <a class="link" href="https://github.com/feichao" target="_blank">GitHub</a>
   </div>
-  <div class="mobile-style">
-    <md-select>
-      <md-option routerLink="art">猿文色</md-option>
-      <md-option routerLink="story">故事旮</md-option>
-      <md-option routerLink="hole">温柔乡</md-option>
-      <md-option routerLink="about">关于の</md-option>
-      <md-option><a href="https://github.com/feichao" target="_blank">GitHub</a></md-option>
+  <div layout="row" flex class="mobile-style">
+    <span flex></span>
+    <md-select (change)="this.onSelectChange()" [(ngModel)]="selectedRouter">
+      <md-option value="/">主页君</md-option>
+      <md-option value="/art">猿文色</md-option>
+      <md-option value="/story">故事旮</md-option>
+      <md-option value="/hole">温柔乡</md-option>
+      <md-option value="/about">关于の</md-option>
     </md-select>
   </div>
 </div>
