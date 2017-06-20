@@ -7,18 +7,43 @@ import { HoleModel, HoleHttpModel } from './hole.interface';
   selector: 'content-hole',
   templateUrl: './hole.component.html',
   styleUrls: ['./hole.component.css'],
-  providers: [HoleService]
+  providers: [HoleService],
+  outputs: ['goPre', 'goNext']
 })
 
 export default class ContentHole implements OnInit {
   public total: number;
-  public holes: HoleModel;
+  public holes: HoleModel[];
+
+  private index:number = 0;
 
   constructor(private holeService: HoleService) {}
 
   ngOnInit() {
-    this.holeService.getHoles(0).then((holeObj: HoleHttpModel) => {
-      this.total = holeObj.total;
+    this.getHoles();
+  }
+
+  goPre() {
+    if(this.index < 0) {
+      // this.snackBar.open('Message archived')
+      return;
+    }
+    this.index--;
+    this.getHoles();
+  }
+
+  goNext() {
+    if(this.index > this.total - 1) {
+      // this.snackBar.open('Message archived')
+      return;
+    }
+    this.index++;
+    this.getHoles();
+  }
+
+  getHoles() {
+    this.holeService.getHoles(this.index).then((holeObj: HoleHttpModel) => {
+      this.total = Math.ceil(holeObj.total / 15);
       this.holes = holeObj.holes;
     });
   }

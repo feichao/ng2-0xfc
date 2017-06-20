@@ -18,6 +18,7 @@ import ContentIndex from './business/content/index/index.component';
 import ContentArt from './business/content/art/art.component';
 import ContentStory from './business/content/story/story.component';
 import ContentHole from './business/content/hole/hole.component';
+import HoleBlock from './business/content/hole/holeblock/holeblock.component';
 
 import { Category } from './business/content/_category/_category.component';
 
@@ -33,6 +34,7 @@ import { Category } from './business/content/_category/_category.component';
     ContentArt,
     ContentStory,
     ContentHole,
+    HoleBlock,
     Category
   ],
   imports: [

@@ -221,6 +221,10 @@ ul, ol {
   flex: 1;
 }
 
+hr {
+  border: none;
+  border-bottom: 1px dashed #d0d0d0;
+}
 
 @media(max-width: 960px) {
   .content-container {

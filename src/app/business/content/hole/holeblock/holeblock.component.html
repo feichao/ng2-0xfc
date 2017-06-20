@@ -1,0 +1,16 @@
+<div class="hole">
+  <div layout="row">
+    <img src="{{ hole.avatar }}" alt="avatar" />
+    <div class="mgl1">
+      <h3 class="mgt0 mgb1">{{ hole.name }}</h3>
+      <p class="mgt1 mgb1">{{ hole.date | date: 'yy/MM/dd HH:mm' }}</p>
+    </div>
+  </div>
+  <hr>
+  <p>{{ hole.content }}</p>
+  <div class="child-hole" *ngFor="let child of hole.children; let i = index;">
+    <hr>
+    <h4 class="mgt1 mgb0">{{ i + 1 }}楼</h4>
+    <hole-block [hole]="child"></hole-block>
+  </div>
+</div>
