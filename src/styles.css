@@ -228,8 +228,10 @@ hr {
 
 @media(max-width: 960px) {
   .content-container {
-    margin: auto 16px;
+    margin: auto 0;
     max-width: 100%;
+    padding: 0 16px;
+    overflow: hidden;
   }
 }
 
