@@ -18,6 +18,7 @@ export class Category implements OnInit {
   public category: CategoryModel[];
   public categoryYearKeys: string[];
   public categoryWithYear: { [year: string]: CategoryModel[] };
+  public isLoading: boolean;
 
   public trim(str: string): SafeHtml {
     return this.sanitized.bypassSecurityTrustHtml(str.replace(/\s/g, ''));
@@ -26,8 +27,10 @@ export class Category implements OnInit {
   constructor(private categoryService: CategoryService, private sanitized: DomSanitizer, private router: Router) {}
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.categoryWithYear = {};
     this.categoryService.getCategory(this.url).then(category => {
+      this.isLoading = false;
       this.category = category;
       if(Array.isArray(this.category)) {
         this.category.forEach(ca => {

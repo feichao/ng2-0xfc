@@ -1,46 +1,52 @@
-<div class="content-container mgb4">
+<div class="content-container mgb4" [ngSwitch]="this.isLoading">
   <content-header cTitle="温柔乡"></content-header>
-  <div class="holes-container large">
-    <div class="hole-container">
-      <div *ngFor="let hole of this.holes; let i = index;">
-        <hole-block *ngIf="i % 3 === 0" [hole]="hole"></hole-block>
+  <md-progress-spinner *ngSwitchCase="true" class="global-loading" strokeWidth="8" mode="indeterminate">
+  </md-progress-spinner>
+  <div *ngSwitchCase="false">
+    <div class="holes-container large">
+      <div class="hole-container">
+        <div *ngFor="let hole of this.holes; let i = index;">
+          <hole-block *ngIf="i % 3 === 0" [hole]="hole"></hole-block>
+        </div>
+      </div>
+      <div class="middle hole-container">
+        <div *ngFor="let hole of this.holes; let i = index;">
+          <hole-block *ngIf="i % 3 === 1" [hole]="hole"></hole-block>
+        </div>
+      </div>
+      <div class="hole-container">
+        <div *ngFor="let hole of this.holes; let i = index;">
+          <hole-block *ngIf="i % 3 === 2" [hole]="hole"></hole-block>
+        </div>
       </div>
     </div>
-    <div class="middle hole-container">
-      <div *ngFor="let hole of this.holes; let i = index;">
-        <hole-block *ngIf="i % 3 === 1" [hole]="hole"></hole-block>
-      </div>
-    </div>
-    <div class="hole-container">
-      <div *ngFor="let hole of this.holes; let i = index;">
-        <hole-block *ngIf="i % 3 === 2" [hole]="hole"></hole-block>
-      </div>
-    </div>
-  </div>
 
-  <div class="holes-container middle">
-    <div class="hole-container">
-      <div *ngFor="let hole of this.holes; let i = index;">
-        <hole-block *ngIf="i % 2 === 0" [hole]="hole"></hole-block>
+    <div class="holes-container middle">
+      <div class="hole-container">
+        <div *ngFor="let hole of this.holes; let i = index;">
+          <hole-block *ngIf="i % 2 === 0" [hole]="hole"></hole-block>
+        </div>
+      </div>
+      <div class="middle hole-container">
+        <div *ngFor="let hole of this.holes; let i = index;">
+          <hole-block *ngIf="i % 2 === 1" [hole]="hole"></hole-block>
+        </div>
       </div>
     </div>
-    <div class="middle hole-container">
-      <div *ngFor="let hole of this.holes; let i = index;">
-        <hole-block *ngIf="i % 2 === 1" [hole]="hole"></hole-block>
-      </div>
-    </div>
-  </div>
 
-  <div class="holes-container small">
-    <div class="hole-container">
-      <div *ngFor="let hole of this.holes; let i = index;">
-        <hole-block [hole]="hole"></hole-block>
+    <div class="holes-container small">
+      <div class="hole-container">
+        <div *ngFor="let hole of this.holes; let i = index;">
+          <hole-block [hole]="hole"></hole-block>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div layout="row" class="paging">
-    <button md-raised-button class="mgr2" (click)="goPre()">上一页</button>
-    <button md-raised-button class="mgl2" (click)="goNext()">下一页</button>
+    <div layout="row" class="paging">
+      <button md-raised-button class="mgr2" (click)="goPre()" [disabled]="this.index <= 0">上一页</button>
+      <button md-raised-button class="mgl2" (click)="goNext()" [disabled]="this.index >= this.total - 1">下一页</button>
+      <span class="mgl2">第 {{ this.index + 1 }} 页</span>
+      <span class="mgl2">共 {{ this.total }} 页</span>
+    </div>
   </div>
 </div>

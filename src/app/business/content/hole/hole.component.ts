@@ -14,6 +14,7 @@ import { HoleModel, HoleHttpModel } from './hole.interface';
 export default class ContentHole implements OnInit {
   public total: number;
   public holes: HoleModel[];
+  public isLoading: boolean;
 
   private index:number = 0;
 
@@ -24,8 +25,7 @@ export default class ContentHole implements OnInit {
   }
 
   goPre() {
-    if(this.index < 0) {
-      // this.snackBar.open('Message archived')
+    if(this.index <= 0) {
       return;
     }
     this.index--;
@@ -33,8 +33,7 @@ export default class ContentHole implements OnInit {
   }
 
   goNext() {
-    if(this.index > this.total - 1) {
-      // this.snackBar.open('Message archived')
+    if(this.index >= this.total - 1) {
       return;
     }
     this.index++;
@@ -42,9 +41,11 @@ export default class ContentHole implements OnInit {
   }
 
   getHoles() {
+    this.isLoading = true;
     this.holeService.getHoles(this.index).then((holeObj: HoleHttpModel) => {
       this.total = Math.ceil(holeObj.total / 15);
       this.holes = holeObj.holes;
+      this.isLoading = false;
     });
   }
 
