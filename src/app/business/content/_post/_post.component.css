@@ -2,16 +2,23 @@
   font: 16px 'monospace';
   line-height: 1.6rem;
 }
+
 :host /deep/ .body blockquote {
   background-color: #f8f8f8;
   border-left: 5px solid #4B4B49;
   margin: 10px 0 0;
   padding: 0.8rem 1rem;
 }
-:host /deep/ .body > p {
+
+:host /deep/ .body>p {
   line-height: 2rem;
   margin: 10px 0;
 }
+
+:host /deep/ canvas {
+  width: 100%;
+}
+
 :host /deep/ .body pre code {
   background-color: #f2f2f2;
   display: block;
@@ -19,7 +26,69 @@
   padding: 10px;
 }
 
-:host /deep/ .body > ol,
-:host /deep/ .body > ul {
+:host /deep/ .body>ol,
+:host /deep/ .body>ul {
   padding-left: 1rem;
+}
+
+.post-container-wraper {
+  background: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.post-container {
+  background: white;
+  height: calc(100% - 88px);
+  overflow: auto;
+  padding: 0 19%;
+  position: relative;
+  transition: all .35s;
+  top: 88px;
+}
+
+.close-btn {
+  background: #00bcd4;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 36px;
+  height: 36px;
+  line-height: 36px;
+  position: absolute;
+  right: 20px;
+  text-align: center;
+  top: 102px;
+  transform: rotateZ(45deg);
+  transition: all .35s;
+  width: 36px;
+  z-index: 1;
+}
+
+@media(max-width: 960px) {
+  .post-container {
+    padding: 0 10%;
+  }
+}
+
+@media(max-width: 640px) {
+  .post-container {
+    padding: 0 16px;
+  }
+  .close-btn {
+    bottom: 100px;
+    left: 16px;
+    right: auto;
+    top: auto;
+  }
+}
+
+@media(max-width: 320px) {
+  .post-container {
+    height: 100%;
+    top: 0;
+  }
 }

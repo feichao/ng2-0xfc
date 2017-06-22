@@ -21,6 +21,7 @@ import ContentHole from './business/content/hole/hole.component';
 import HoleBlock from './business/content/hole/holeblock/holeblock.component';
 
 import { Category } from './business/content/_category/_category.component';
+import { Post } from './business/content/_post/_post.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { Category } from './business/content/_category/_category.component';
     ContentStory,
     ContentHole,
     HoleBlock,
-    Category
+    Category,
+    Post
   ],
   imports: [
     BrowserModule,

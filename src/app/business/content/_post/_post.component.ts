@@ -1,5 +1,6 @@
-import { Component, Injectable, OnInit, ElementRef } from '@angular/core';
+import { Component, Injectable, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
 
 import 'rxjs/add/operator/switchMap';
@@ -20,7 +21,7 @@ function getWindow() : any {
 })
 
 @Injectable()
-export class Post implements OnInit {
+export class Post implements OnInit, OnDestroy {
   public post: PostModel;
   public saftyBody: SafeHtml;
   public saftyCssLink: SafeResourceUrl[];
@@ -29,6 +30,7 @@ export class Post implements OnInit {
   constructor(
     private route: ActivatedRoute, 
     private router: Router,
+    private location: Location,
     private postService: PostService,
     private sanitized: DomSanitizer,
     private elementRef: ElementRef) {}
@@ -42,6 +44,7 @@ export class Post implements OnInit {
 
         this.saftyCssLink = [];
         
+        document.body.style.overflow = 'hidden';
         // 强制加载网易云跟帖插件
         let tie = document.getElementById('cloud-tie-wrapper');
         if(tie) {
@@ -66,5 +69,13 @@ export class Post implements OnInit {
           this.saftyCssLink.push(this.sanitized.bypassSecurityTrustResourceUrl(cssLink));
         }
       });
+  }
+
+  ngOnDestroy():void {
+    document.body.style.overflow = '';
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

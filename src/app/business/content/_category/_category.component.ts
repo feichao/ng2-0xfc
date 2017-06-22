@@ -4,6 +4,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { CategoryService } from './_category.service';
 import { CategoryModel } from './_category.interface';
 
+import Constant from '../../../app.constant';
+
 @Component({
   selector: 'content-category',
   templateUrl: './_category.component.html',
@@ -20,11 +22,15 @@ export class Category implements OnInit {
   public categoryWithYear: { [year: string]: CategoryModel[] };
   public isLoading: boolean;
 
+  public isArt: boolean;
+
   public trim(str: string): SafeHtml {
     return this.sanitized.bypassSecurityTrustHtml(str.replace(/\s/g, ''));
   }
   
-  constructor(private categoryService: CategoryService, private sanitized: DomSanitizer, private router: Router) {}
+  constructor(private categoryService: CategoryService, private sanitized: DomSanitizer, private router: Router) {
+    this.isArt = this.url === Constant.URL.art;
+  }
 
   ngOnInit(): void {
     this.isLoading = true;

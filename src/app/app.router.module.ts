@@ -5,6 +5,7 @@ import ContentIndex from './business/content/index/index.component';
 import ContentArt from './business/content/art/art.component';
 import ContentStory from './business/content/story/story.component';
 import ContentHole from './business/content/hole/hole.component';
+import { Post } from './business/content/_post/_post.component';
 
 import AboutComponent from './business/about/about.component';
 
@@ -14,17 +15,17 @@ const routes: Routes = [{
   }, { 
     path: 'art', 
     component: ContentArt, 
-    // children: [{
-    //   path: ':id',
-    //   component: Post,
-    // }]
+    children: [{
+      path: ':id',
+      component: Post,
+    }]
   }, {
     path: 'story', 
     component: ContentStory,
-    // children: [{
-    //   path: ':id',
-    //   component: Post,
-    // }]
+    children: [{
+      path: ':id',
+      component: Post,
+    }]
   }, { 
     path: 'hole', 
     component: ContentHole 
