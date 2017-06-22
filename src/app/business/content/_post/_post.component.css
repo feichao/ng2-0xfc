@@ -55,16 +55,18 @@
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  font-size: 36px;
-  height: 36px;
-  line-height: 36px;
+  font-size: 32px;
+  height: 32px;
+  line-height: 32px;
+  outline: none;
   position: absolute;
   right: 20px;
   text-align: center;
   top: 102px;
   transform: rotateZ(45deg);
   transition: all .35s;
-  width: 36px;
+  width: 32px;
+  user-select: none;
   z-index: 1;
 }
 
@@ -79,14 +81,14 @@
     padding: 0 16px;
   }
   .close-btn {
-    bottom: 100px;
-    left: 16px;
+    bottom: 40px;
+    left: 14px;
     right: auto;
     top: auto;
   }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 480px) {
   .post-container {
     height: 100%;
     top: 0;

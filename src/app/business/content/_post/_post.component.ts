@@ -46,18 +46,18 @@ export class Post implements OnInit, OnDestroy {
         
         document.body.style.overflow = 'hidden';
         // 强制加载网易云跟帖插件
-        let tie = document.getElementById('cloud-tie-wrapper');
-        if(tie) {
-          tie.innerHTML = '';
-        }
-        this._window.cloudTieConfig = {
-          url: document.location.href,
-          sourceId: '',
-          productKey: 'b6fef8a47c1445d8acfddbd8dc465ff3',
-          target: 'cloud-tie-wrapper'
-        };
+        // let tie = document.getElementById('cloud-tie-wrapper');
+        // if(tie) {
+        //   tie.innerHTML = '';
+        // }
+        // this._window.cloudTieConfig = {
+        //   url: document.location.href,
+        //   sourceId: '',
+        //   productKey: 'b6fef8a47c1445d8acfddbd8dc465ff3',
+        //   target: 'cloud-tie-wrapper'
+        // };
 
-        this.post.js.push('https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js');
+        // this.post.js.push('https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js');
         for(let jsLink of this.post.js) {
           var s = document.createElement('script');
           s.type = 'text/javascript';
