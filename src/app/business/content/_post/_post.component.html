@@ -1,16 +1,19 @@
 <div class="post-container-wraper">
-  <md-progress-spinner *ngIf="!post" class="global-loading" strokeWidth="8" mode="indeterminate">
-  </md-progress-spinner>
   <span *ngIf="post" class="close-btn" (click)="goBack()">+</span>
-  <div class="post-container" *ngIf="post">
-    <link [href]="css" *ngFor="let css of saftyCssLink" rel="stylesheet" />
-    <h1 class="title" layout="row">
-      <!--<span flex>{{ post.title }}</span>-->
-      {{ post.title }}
-    </h1>
-    <h2>{{ post.author }} <span class="mgl4">{{ post.update }}</span></h2>
-    <hr>
-    <div [innerHTML]="saftyBody" class="body"></div>
-    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+  <div class="post-container">
+    <md-progress-spinner *ngIf="!post" class="global-loading" strokeWidth="8" mode="indeterminate">
+    </md-progress-spinner>
+    <div *ngIf="post">
+      <link [href]="css" *ngFor="let css of saftyCssLink" rel="stylesheet" />
+      <h2 class="title" layout="row">
+        {{ post.title }}
+      </h2>
+      <h3 layout="row">
+        <span flex>{{ post.author }}</span>
+        <span>{{ post.update | date: 'yy/MM/dd HH:mm' }}</span></h3>
+      <hr>
+      <div [innerHTML]="saftyBody" class="body"></div>
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    </div>
   </div>
 </div>

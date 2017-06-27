@@ -5,13 +5,15 @@ body {
   font-size: 14px;
 }
 
-body, ul {
+body,
+ul {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -217,7 +219,7 @@ ul, ol {
   display: flex;
 }
 
-[layout='row'] > [flex] {
+[layout='row']>[flex] {
   flex: 1;
 }
 
@@ -228,7 +230,7 @@ hr {
 
 .global-loading {
   margin: auto;
-  margin-top: 100px; 
+  margin-top: 100px;
 }
 
 .global-loading path {
@@ -245,7 +247,6 @@ hr {
 }
 
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
 #yun-tie-sdk-wrap {
   padding: 0 !important;
 }

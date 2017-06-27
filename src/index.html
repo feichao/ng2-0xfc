@@ -8,12 +8,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./favicon.png">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="assets/styles/highlight.min.css" rel="stylesheet">
+  <style>
+    app-root>h2.loading {
+      font-family: initial;
+      font-size: 24px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 36%;
+    }
+  </style>
 </head>
 
 <body>
-  <app-root></app-root>
+  <app-root>
+    <h2 class="loading">loading...</h2>
+  </app-root>
 </body>
 
 </html>

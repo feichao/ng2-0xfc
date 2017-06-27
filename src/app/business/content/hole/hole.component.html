@@ -42,11 +42,11 @@
       </div>
     </div>
 
-    <div layout="row" class="paging">
-      <button md-raised-button class="mgr2" (click)="goPre()" [disabled]="this.index <= 0">上一页</button>
-      <button md-raised-button class="mgl2" (click)="goNext()" [disabled]="this.index >= this.total - 1">下一页</button>
-      <span class="mgl2">第 {{ this.index + 1 }} 页</span>
-      <span class="mgl2">共 {{ this.total }} 页</span>
+    <div layout="row" class="paging pdb2">
+      <button md-raised-button class="mgr1" (click)="goPre()" [disabled]="this.index <= 0">上一页</button>
+      <button md-raised-button class="mgl1" (click)="goNext()" [disabled]="this.index >= this.total - 1">下一页</button>
+      <span class="mgl1">第 {{ this.index + 1 }} 页</span>
+      <span class="mgl1">共 {{ this.total }} 页</span>
     </div>
   </div>
 </div>
