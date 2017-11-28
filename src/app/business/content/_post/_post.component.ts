@@ -22,10 +22,10 @@ function getWindow() : any {
 
 @Injectable()
 export class Post implements OnInit, OnDestroy {
-  public post: PostModel;
-  public saftyBody: SafeHtml;
-  public saftyCssLink: SafeResourceUrl[];
-  public _window: any = getWindow();
+  post: PostModel;
+  saftyBody: SafeHtml;
+  saftyCssLink: SafeResourceUrl[];
+  _window: any = getWindow();
 
   constructor(
     private route: ActivatedRoute, 

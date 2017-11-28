@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   outputs: ['onSelectChange']
 })
 
-export default class HeaderComponent {
-  public selectedRouter: string;
+export class HeaderComponent {
+  selectedRouter: string;
 
   constructor(private router: Router) {
     router.events.subscribe((urlObj: any) => this.selectedRouter = urlObj.url);

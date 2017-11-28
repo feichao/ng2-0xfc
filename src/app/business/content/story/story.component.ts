@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import Constant from '../../../app.constant';
+import { Constant } from '../../../app.constant';
 
 @Component({
   selector: 'content-story',
   templateUrl: './story.component.html',
   styleUrls: ['./story.component.css']
 })
-export default class ContentStory {
-  public storyUrl: string = Constant.URL.story;
+export class ContentStory {
+  storyUrl: string = Constant.URL.story;
 }

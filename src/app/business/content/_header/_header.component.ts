@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   inputs: ['cTitle']
 })
 
-export default class ContentHeader {
-  public cTitle: string;
+export class ContentHeader {
+  cTitle: string;
 }

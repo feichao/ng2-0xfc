@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   inputs: ['hole']
 })
 
-export default class HoleBlock {
-  public hole;
+export class HoleBlock {
+  hole;
 }

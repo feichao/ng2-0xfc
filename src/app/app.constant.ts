@@ -2,7 +2,7 @@ import { environment } from '../environments/environment';
 
 const baseUrl = environment.server;
 
-const Constant = {
+const Constant_ = {
   URL: {
     art: baseUrl + 'json/articles/category',
     story: baseUrl + 'json/storys/category',
@@ -12,4 +12,4 @@ const Constant = {
   }
 };
 
-export default Constant;
+export let Constant = Constant_;

@@ -11,12 +11,12 @@ import { HoleModel, HoleHttpModel } from './hole.interface';
   outputs: ['goPre', 'goNext']
 })
 
-export default class ContentHole implements OnInit {
-  public total: number;
-  public holes: HoleModel[];
-  public isLoading: boolean;
+export class ContentHole implements OnInit {
+  total: number;
+  holes: HoleModel[];
+  isLoading: boolean;
 
-  private index:number = 0;
+  index:number = 0;
 
   constructor(private holeService: HoleService) {}
 

@@ -27,3 +27,14 @@
   margin-top: 32px;
   width: 120px;
 }
+
+.index-container .filing-wrapper {
+  bottom: 0;
+  font-size: 12px;
+  position: absolute;
+  width: 100%;
+}
+.filing-wrapper /deep/ a {
+  color: #ddd;
+  text-decoration: none;
+}

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 
-export default class ContentIndex {
+export class ContentIndex {
 
 }

@@ -4,7 +4,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { CategoryService } from './_category.service';
 import { CategoryModel } from './_category.interface';
 
-import Constant from '../../../app.constant';
+import { Constant } from '../../../app.constant';
 
 @Component({
   selector: 'content-category',
@@ -16,15 +16,15 @@ import Constant from '../../../app.constant';
 
 @Injectable()
 export class Category implements OnInit {
-  public url: string;
-  public category: CategoryModel[];
-  public categoryYearKeys: string[];
-  public categoryWithYear: { [year: string]: CategoryModel[] };
-  public isLoading: boolean;
+  url: string;
+  category: CategoryModel[];
+  categoryYearKeys: string[];
+  categoryWithYear: { [year: string]: CategoryModel[] };
+  isLoading: boolean;
 
-  public isArt: boolean;
+  isArt: boolean;
 
-  public trim(str: string): SafeHtml {
+  trim(str: string): SafeHtml {
     return this.sanitized.bypassSecurityTrustHtml(str.replace(/\s/g, ''));
   }
   
